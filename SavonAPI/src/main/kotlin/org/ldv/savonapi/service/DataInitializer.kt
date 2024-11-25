@@ -14,6 +14,5 @@ class DataInitializer (val ingredientDAO: IngredientDAO) : CommandLineRunner {
             ingredientDAO.saveAll(ingredients)
         }
         // Pour importer les caracteristiques ...
-
     }
 }

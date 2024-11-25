@@ -1,6 +1,5 @@
 package org.ldv.savonapi.model.entity
 
-import Caracteristique
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -13,12 +12,12 @@ import jakarta.persistence.Table
 class Mention (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val mentionid : Long? = null,
+    var mentionId : Long? = null,
     var mentionSavon : String? = null,
     var savonMini : Float? = null,
     var savonMaxi : Float? = null,
     /*
-    @ManyToOne
+    @ManyToOnea
     @JoinColumn(name = "caracteristique_id")
     var caracteristiques: Caracteristique? = null
     *

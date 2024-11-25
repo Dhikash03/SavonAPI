@@ -1,0 +1,28 @@
+meta {
+  name: POST ingredient
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8081/api-savon/ingredient
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ingredientid": 2,
+    "nomCorpsGras": "Coco",
+    "sapo": 257.0,
+    "iode": 9.0,
+    "ins": 248.0,
+    "douceur": 7.746,
+    "lavant": 14.462,
+    "volMousse": 13.326,
+    "tenueMousse": 9.56,
+    "durete": 9.39,
+    "solucibilite": 11.204,
+    "sechage": 11.88
+  }
+}

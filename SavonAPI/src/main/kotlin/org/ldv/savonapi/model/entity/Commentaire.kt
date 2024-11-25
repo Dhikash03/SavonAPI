@@ -8,7 +8,7 @@ import java.time.LocalDate
 class Commentaire(
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    val commentaireId: Long,
+    var commentaireId: Long,
     val dateCommentaire: LocalDate? = null,
     val texte: String,
 
