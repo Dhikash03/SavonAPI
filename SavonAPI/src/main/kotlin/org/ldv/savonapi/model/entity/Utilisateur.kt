@@ -1,4 +1,4 @@
 package org.ldv.savonapi.model.entity
 
-class gd {
+class Utilisateur {
 }
