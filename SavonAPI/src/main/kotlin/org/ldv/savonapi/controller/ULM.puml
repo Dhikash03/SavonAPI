@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Choisir les huile;
+:quantité huile;
+
+if (Choisir agent alcanin) then (Si potasse)
+
+:calcule huile et saponification;
+:quantité d'eau déjâ mis 10%;
+:Calculer;
+
+stop
+
+else (Si soude)
+:Calculer quantité huile et saponification;
+:quantité d'eau;
+:Calculer;
+
+stop
+
+@enduml

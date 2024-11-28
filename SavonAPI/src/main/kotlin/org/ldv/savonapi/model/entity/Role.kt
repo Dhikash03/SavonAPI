@@ -1,5 +1,3 @@
-
-/*
 package org.ldv.savonapi.model.entity
 
 import jakarta.persistence.Entity
@@ -7,17 +5,18 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.OneToMany
-
+/*
 @Entity
-class Utilisateur(
+class Role (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var utilisateurId: Long? = null,
-    var login: String,
-    var mdp: String,
-    var email: String,
+    var id : Int,
+    var visiteur : String,
+    var admin : String,
+    var utilisateur : String,
 
+    @OneToMany(mappedBy = "Role")
+    var utilisateurs : MutableList<Utilisateur> = mutableListOf(),
 
 ) {
-    
 }*/

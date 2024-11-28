@@ -1,5 +1,6 @@
 package org.ldv.savonapi.model.entity
 
+
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -25,7 +26,7 @@ class Ingredient(
     var sechage: Float,
 
 
-    //@OneToMany(mappedBy = "ingredients")
-    // var recetteSavon: MutableList<RecetteSavon>?= null
+    @OneToMany(mappedBy = "ingredient")
+    var recetteSavon: MutableList<Ligne> = mutableListOf()
 ) {
 }

@@ -12,12 +12,9 @@ class Commentaire(
     val dateCommentaire: LocalDate? = null,
     val texte: String,
 
-   /* @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "recetteSavon_id")
     var recetteSavon: RecetteSavon? = null,
 
-    @ManyToOne
-    @JoinColumn(name = "utlisateur_id")
-    var utilisateur: Utilisateur? = null*/
 ) {
 }
