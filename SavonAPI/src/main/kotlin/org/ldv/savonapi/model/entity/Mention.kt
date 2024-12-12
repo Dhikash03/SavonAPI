@@ -16,11 +16,12 @@ class Mention (
     var mentionSavon : String? = null,
     var savonMini : Float? = null,
     var savonMaxi : Float? = null,
-    /*
-    @ManyToOnea
+
+
+    @ManyToOne
     @JoinColumn(name = "caracteristique_id")
     var caracteristiques: Caracteristique? = null
-    *
-     */
+
+
 ){
 }

@@ -22,7 +22,13 @@ class Resultat(
     @JoinColumn(name = "recettesavon_id")
     var recetteSavon: RecetteSavon? = null,
 
-    val resultat: Float? = null
+    @MapsId("mentionId")
+    @ManyToOne
+    @JoinColumn(name ="mention_id")
+    var mention: Mention? = null,
+
+
+    var score: Float? = null
 ) {
 
 }

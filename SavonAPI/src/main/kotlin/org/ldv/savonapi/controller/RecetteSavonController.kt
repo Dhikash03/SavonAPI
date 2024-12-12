@@ -1,5 +1,6 @@
 package org.ldv.savonapi.controller
 
+import org.ldv.savonapi.dto.RecetteFormDTO
 import org.ldv.savonapi.model.dao.RecetteSavonDAO
 import org.ldv.savonapi.model.entity.Ingredient
 import org.ldv.savonapi.model.entity.RecetteSavon
@@ -33,6 +34,10 @@ class RecetteSavonController (private val recetteSavonDAO: RecetteSavonDAO){
         } else {
             ResponseEntity.notFound().build()
         }
+    }
+
+    fun store(@RequestBody recetteFormDTO: RecetteFormDTO): ResponseEntity<RecetteSavon>{
+
     }
 
 }
