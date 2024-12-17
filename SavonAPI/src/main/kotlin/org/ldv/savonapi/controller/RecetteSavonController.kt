@@ -2,14 +2,19 @@ package org.ldv.savonapi.controller
 
 import org.ldv.savonapi.dto.RecetteFormDTO
 import org.ldv.savonapi.model.dao.RecetteSavonDAO
-import org.ldv.savonapi.model.entity.Ingredient
 import org.ldv.savonapi.model.entity.RecetteSavon
+import org.ldv.savonapi.service.SimulateurService
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.net.URI
 
 @RestController
 @RequestMapping("/api-savon/recetteSavon")
-class RecetteSavonController (private val recetteSavonDAO: RecetteSavonDAO){
+class RecetteSavonController(
+    private val recetteSavonDAO: RecetteSavonDAO,
+    private val simulateurService: SimulateurService
+){
 
     @GetMapping
     fun getAllRecetteSavon(): List<RecetteSavon>{
@@ -36,7 +41,18 @@ class RecetteSavonController (private val recetteSavonDAO: RecetteSavonDAO){
         }
     }
 
+    @PostMapping
     fun store(@RequestBody recetteFormDTO: RecetteFormDTO): ResponseEntity<RecetteSavon>{
+
+        val savedRecette = simulateurService.toRecette(recetteFormDTO)
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedRecette)
+    }
+
+    @PutMapping("/{id}")
+    fun update(@PathVariable id: Long, @RequestBody recetteFormDTO: RecetteFormDTO ) : ResponseEntity<RecetteSavon>{
+
+        val 
 
     }
 

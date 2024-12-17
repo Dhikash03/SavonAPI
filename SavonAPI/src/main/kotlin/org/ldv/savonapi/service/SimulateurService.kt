@@ -8,7 +8,13 @@ import org.ldv.savonapi.model.entity.RecetteSavon
 import org.ldv.savonapi.model.entity.Resultat
 import org.ldv.savonapi.model.id.LigneId
 import org.ldv.savonapi.model.id.ResultatId
+import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestBody
+
 /**
  * Service pour gérer la simulation et la création de recettes de savon.
  *
@@ -101,8 +107,22 @@ class SimulateurService(
             titre = recetteFormDTO.tite
         )
         this.recetteSavonDAO.save(recette)
-        for (ligneDTO in ligneIngredientDAO){
+        for (ligneDTO in recetteFormDTO.ligneIngredients){
+            var ligne = this.toLigne(ligneDTO)
+            ligne = recette.
 
         }
+
+
     }
-}
+
+uu-
+
+
+
+
+
+
+
+
+
